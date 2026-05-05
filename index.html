@@ -83,7 +83,7 @@ header p{
 
 /* SECTIONS */
 section{
-    padding:30px 8%;
+    padding:1px 3% 10px;
 }
 
 .section-title{
@@ -149,13 +149,38 @@ section{
     font-size:0.85rem;
 }
 
+/* MOUSE ANIMATION (RIGHT → LEFT FIXED) */
+.mouse-track{
+    position:relative;
+    width:100%;
+    height:18px;
+    margin-top:10px;
+    overflow:hidden;
+}
+
+.mouse{
+    position:absolute;
+    right:-30px;
+    font-size:18px;
+    animation:walkMouse 4.5s linear infinite;
+}
+
+@keyframes walkMouse{
+    0%{
+        right:-30px;
+    }
+    100%{
+        right:100%;
+    }
+}
+
 /* FOOTER */
 footer{
     text-align:center;
-    padding:40px 20px;
+    padding:15px 20px;
     border-top:1px solid #1e293b;
     color:#94a3b8;
-    margin-top:40px;
+    margin-top:5px;
 }
 </style>
 </head>
@@ -173,7 +198,6 @@ footer{
     <div class="hero-buttons">
         <a href="https://github.com/SN-Abdullah-Al-Noman">GitHub</a>
         <a href="https://t.me/FlameRomNews">Telegram</a>
-        <a href="https://sourceforge.net/projects/yourproject/files/">Downloads</a>
     </div>
 
     <div class="terminal">
@@ -181,6 +205,11 @@ $ initializing quantum environment...<br>
 $ loading build tools...<br>
 $ compiling android system...<br>
 <span style="color:#60a5fa;">$ Quantum Project Ready ✔</span>
+
+<div class="mouse-track">
+    <div class="mouse">🐀</div>
+</div>
+
     </div>
 </header>
 
@@ -188,7 +217,6 @@ $ compiling android system...<br>
     <h2 class="section-title">Custom ROMs</h2>
 
     <div class="grid">
-
         <div class="card">
             <h3>Quantum OS</h3>
             <p>Lightweight optimized Android ROM with performance tuning.</p>
@@ -206,7 +234,6 @@ $ compiling android system...<br>
             <p>Changelogs and update packages.</p>
             <a href="#">Updates</a>
         </div>
-
     </div>
 </section>
 
@@ -214,23 +241,37 @@ $ compiling android system...<br>
     <h2 class="section-title">Custom Rom Builder Tools</h2>
 
     <div class="grid">
+        <div class="card">
+            <p>ROM builder for Linux, Termux & Github Action.</p>
 
-    <div class="card">
-        <h3>Quantum Kitchen</h3>
-        <p>ROM builder for Linux, Termux & Github Action.</p>
+            <div style="margin-top:10px; display:flex; gap:12px; flex-wrap:wrap;">
 
-        <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
-            <a href="#" style="font-size:12px; padding:6px 10px; background:#1f2937; border:1px solid #3b82f6;">Termux Kitchen</a>
-            <a href="#" style="font-size:12px; padding:6px 10px; background:#1f2937; border:1px solid #a855f7;">Linux/WSL Kitchen</a>
-            <a href="#" style="font-size:12px; padding:6px 10px; background:#1f2937; border:1px solid #a855f7;">Github Action Kitchen [Automatic]</a>
+                <a href="https://t.me/FlameRomNews/2585"
+                   target="_blank"
+                   style="text-decoration:none;padding:10px 14px;border-radius:10px;background:#2563eb;color:white;font-size:12px;font-weight:600;border:1px solid #60a5fa;box-shadow:0 0 12px rgba(59,130,246,0.35);">
+                   Termux
+                </a>
+
+                <a href="https://t.me/FlameRomNews/2567"
+                   target="_blank"
+                   style="text-decoration:none;padding:10px 14px;border-radius:10px;background:#7c3aed;color:white;font-size:12px;font-weight:600;border:1px solid #c084fc;box-shadow:0 0 12px rgba(168,85,247,0.35);">
+                   Linux/WSL
+                </a>
+
+                <a href="https://github.com/SN-Abdullah-Al-Noman/QuantumROM"
+                   target="_blank"
+                   style="text-decoration:none;padding:10px 14px;border-radius:10px;background:#16a34a;color:white;font-size:12px;font-weight:600;border:1px solid #4ade80;box-shadow:0 0 12px rgba(34,197,94,0.35);">
+                   GitHub Action
+                </a>
+
+            </div>
         </div>
-
+    </div>
 </section>
 
 <footer>
-    © 2026 Quantum Project <br>
-    Build • Modify • Flash • Innovate
+    © 2026 Quantum Project • Build • Modify • Flash
 </footer>
 
 </body>
-    </html>
+</html>
